@@ -1,0 +1,10 @@
+{
+    "editor.tabSize": 4,
+    "editor.useTabStops": true,
+    "editor.insertSpaces": true,
+    "explorer.compactFolders": false,
+    "workbench.list.openMode": "doubleClick",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.expandMode": "doubleClick",
+    "workbench.tree.indent": 20,
+}
