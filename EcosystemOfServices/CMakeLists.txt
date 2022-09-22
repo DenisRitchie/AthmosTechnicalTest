@@ -8,7 +8,7 @@ project(
     HOMEPAGE_URL "https://github.com/DenisRitchie/AthmosTechnicalTest/tree/master/EcosystemOfServices"
 )
 
-message(STATUS "Project: ${PROJECT_NAME} Version: ${PROJECT_VERSION}")
+message(STATUS "${PROJECT_NAME} v${PROJECT_VERSION}: ${PROJECT_DESCRIPTION}")
 
 add_compile_options(-Wall -Wextra -pedantic -Werror -fstrict-enums -fconcepts -fcoroutines -fpermissive)
 
