@@ -16,8 +16,8 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-    ${_external_library_boost}
-    ${_external_library_common}
-    EcosystemServices::Library::Entities
-    EcosystemServices::Library::MemoryJsonDatabase
+        ${_external_library_boost}
+        ${_external_library_common}
+        EcosystemServices::Library::Helpers
+        EcosystemServices::Library::Entities
 )

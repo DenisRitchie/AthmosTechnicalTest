@@ -41,6 +41,9 @@ find_package(unofficial-libharu CONFIG REQUIRED)
 find_package(log4cplus CONFIG REQUIRED)
 find_package(microsoft-signalr CONFIG REQUIRED)
 
+# https://github.com/Microsoft/vcpkg/issues/2979
+# find_library(libxlsxwriter_LIB libxlsxwriter.a)
+
 list(APPEND _external_library_common
   cpprestsdk::cpprest
   benchmark::benchmark

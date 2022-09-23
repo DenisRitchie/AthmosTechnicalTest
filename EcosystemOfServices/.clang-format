@@ -117,7 +117,8 @@ IndentCaseBlocks: false
 IndentGotoLabels: true
 IndentPPDirectives: BeforeHash # AfterHash
 IndentExternBlock: AfterExternBlock
-IndentRequires:  false
+IndentRequires: false
+# IndentRequiresClause: false # clang-format 15
 IndentWidth: 2
 IndentWrappedFunctionNames: false
 InsertTrailingCommas: None
@@ -166,6 +167,7 @@ RawStringFormats:
 ReferenceAlignment: Pointer # clang-format 14
 ReflowComments: true
 RemoveBracesLLVM: false # clang-format 14
+# RequiresClausePosition: OwnLine # clang-format 15
 SeparateDefinitionBlocks: Always # clang-format 14
 ShortNamespaceLines: 1 # clang-format 14
 SortIncludes: Never

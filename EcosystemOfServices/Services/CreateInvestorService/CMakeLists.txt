@@ -18,5 +18,6 @@ target_link_libraries(${PROJECT_NAME}
     PRIVATE
         ${_external_library_boost}
         ${_external_library_common}
+        EcosystemServices::Library::Helpers
         EcosystemServices::Library::Entities
 )
