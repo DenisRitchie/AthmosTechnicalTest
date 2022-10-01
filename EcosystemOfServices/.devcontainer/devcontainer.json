@@ -14,7 +14,6 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"DavidSchuldenfrei.gtest-adapter",
 				"Guyutongxue.cpp-reference",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"VisualStudioExptTeam.vscodeintellicode-completions",
@@ -24,11 +23,8 @@
 				"cheshirekow.cmake-format",
 				"christian-kohler.path-intellisense",
 				"cschlosser.doxdocgen",
-				"derivitec-ltd.cmake-test-adapter",
 				"formulahendry.code-runner",
 				"formulahendry.docker-explorer",
-				"fredericbonnet.cmake-test-adapter",
-				"hbenl.vscode-test-explorer",
 				"huang12zheng.protobuf-helper",
 				"iuyoy.highlight-string-code",
 				"jeff-hykin.better-cpp-syntax",
@@ -51,7 +47,6 @@
 				"shardulm94.trailing-spaces",
 				"surajbarkale.ninja",
 				"twxs.cmake",
-				"vadimcn.vscode-lldb",
 				"wayou.vscode-todo-highlight",
 				"wraith13.bracket-lens",
 				"wwm.better-align",
@@ -77,29 +72,6 @@
 				"cmake.useCMakePresets": "never",
 				"cmake.configureSettings": {
 					"CMAKE_TOOLCHAIN_FILE": "${containerEnv:VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
-				},
-				"C_Cpp.default.cStandard": "gnu17",
-				"C_Cpp.default.cppStandard": "gnu++23",
-				"C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
-				"C_Cpp.default.compilerPath": "/usr/bin/g++",
-				"C_Cpp.intelliSenseCacheSize": 76800,
-				"C_Cpp.intelliSenseEngineFallback": "Enabled",
-				"C_Cpp.intelliSenseEngine": "Default",
-				"C_Cpp.intelliSenseMemoryLimit": 16384,
-				"C_Cpp.default.includePath": [
-					"${workspaceFolder}/Libraries",
-					"${containerEnv:VCPKG_ROOT}/installed/x64-linux/include",
-					"${workspaceFolder}/build/_deps/googletest-src/googletest/include",
-					"${workspaceFolder}/build/_deps/googletest-src/googlemock/include"
-				],
-				"files.associations": {
-					"CMakePresets.json": "jsonc",
-					".clang-format": "yaml",
-					".clang-tidy": "yaml",
-					".clangd": "yaml",
-					"*.yml": "dockercompose",
-					"*.tcc": "cpp",
-					"*.inc": "cpp"
 				}
 			}
 		}

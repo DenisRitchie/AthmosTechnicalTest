@@ -27,22 +27,20 @@
         "CMAKE_TOOLCHAIN_FILE": "${env:VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
     },
     "cmakeLanguageSupport.enableFileAPI": true,
-    "cmakeExplorer.cmakeIntegration": true,
     "C_Cpp.default.cStandard": "gnu17",
     "C_Cpp.default.cppStandard": "gnu++23",
     "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
-    // "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    "C_Cpp.intelliSenseCacheSize": 76800,
-    "C_Cpp.intelliSenseEngineFallback": "Enabled",
-    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "C_Cpp.intelliSenseMemoryLimit": 16384,
+    "C_Cpp.intelliSenseCacheSize": 76800,
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/Libraries",
         "${env:VCPKG_ROOT}/installed/x64-linux/include",
         "${workspaceFolder}/build/_deps/googletest-src/googletest/include",
         "${workspaceFolder}/build/_deps/googletest-src/googlemock/include"
     ],
+    "testMate.cpp.test.executables": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -65,10 +63,6 @@
             }
         ]
     },
-    "gtest-adapter.debugConfig": [
-        "Helpers Library Tests"
-    ],
-    "gtest-adapter.supportLocation": true,
     "files.associations": {
         "*.yml": "dockercompose",
         ".clang-tidy": "yaml",

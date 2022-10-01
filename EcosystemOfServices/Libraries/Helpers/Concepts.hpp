@@ -1,4 +1,4 @@
-#ifndef C809D3A4_6BD7_4B37_A1F2_E98785194D73
+﻿#ifndef C809D3A4_6BD7_4B37_A1F2_E98785194D73
 #define C809D3A4_6BD7_4B37_A1F2_E98785194D73
 
 // https://en.cppreference.com/w/cpp/ranges/range
@@ -30,6 +30,9 @@ namespace EcosystemServices::Library::Helpers
 
   template <typename TRange>
   concept Range = std::ranges::range<TRange>;
+
+  template <typename TypeToCheck, typename... TypesToCheckAgainst>
+  concept EqualsTo = (std::is_same_v<std::remove_cvref_t<TypeToCheck>, TypesToCheckAgainst> || ...);
 
   template <typename TypeToCheck, typename... TypesToCheckAgainst>
   concept NotEqualsTo = (std::negation_v<std::is_same<std::remove_cvref_t<TypeToCheck>, TypesToCheckAgainst>> && ...);
@@ -106,6 +109,34 @@ namespace EcosystemServices::Library::Helpers
 
   template <typename TValue>
   concept ScopedEnum = IsScopedEnumV<TValue>;
+
+  // https://cpprefjp.github.io/lang/cpp20/concepts.html
+  // clang-format off
+
+  template <class TRange>
+  concept SequenceContainer = requires(TRange Range)
+  {
+    typename TRange::size_type;
+    typename TRange::value_type;
+
+    { Range.size()     } -> std::convertible_to<typename TRange::size_type>;
+    { std::size(Range) } -> std::convertible_to<typename TRange::size_type>;
+
+    Range.push_back(std::declval<typename TRange::value_type>());
+  };
+
+  // clang-format on
+
+  // helper type for the visitor or others
+  template <class... Ts>
+  struct Overloaded : Ts...
+  {
+      using Ts::operator()...;
+  };
+
+  // explicit deduction guide (not needed as of C++20)
+  template <class... Ts>
+  Overloaded(Ts...) -> Overloaded<Ts...>;
 
 } // namespace EcosystemServices::Library::Helpers
 
